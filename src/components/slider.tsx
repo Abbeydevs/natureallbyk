@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 const slides = [
   {
     id: 1,
-    title: "Welcome to NaturalAllByK",
+    title: "Welcome to NatureAll By K",
     description: "Sale! Up to 20% off!",
     img: img1,
     url: "/",
@@ -42,13 +42,13 @@ const Slider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-    }, 3000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="h-[calc(100vh-80px)] overflow-hidden">
+    <div className="h-screen overflow-hidden">
       <div
         className="w-max h-full flex transition-all ease-in-out duration-1000"
         style={{ transform: `translateX(-${current * 100}vw)` }}
@@ -61,28 +61,19 @@ const Slider = () => {
               "w-screen h-full flex flex-col gap-16 lg:flex-row"
             )}
           >
-            <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col items-center justify-center gap-8 text-center">
+            <div className="h-full lg:w-full flex flex-col items-center justify-center gap-8 text-center">
               <h2 className="text-lg lg:text-2xl">{slide.description}</h2>
-              <h1 className="text-4xl lg:text-7xl font-bold w-2/3">
+              <h1 className="text-4xl lg:text-8xl font-bold w-full lg:w-1/2">
                 {slide.title}
               </h1>
               <Link href={slide.url}>
                 <Button>SHOP NOW</Button>
               </Link>
             </div>
-            <div className="h-1/2 lg:h-full lg:w-1/2 relative">
-              <Image
-                src={slide.img}
-                alt="hero-image"
-                fill
-                sizes="100%"
-                className="object-cover"
-              />
-            </div>
           </div>
         ))}
       </div>
-      <div className="absolute m-auto left-1/2 bottom-8 flex gap-4">
+      <div className="absolute m-auto bottom-8 flex items-center justify-center gap-4 w-full">
         {slides.map((slide, index) => (
           <div
             key={slide.id}

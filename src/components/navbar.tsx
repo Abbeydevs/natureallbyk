@@ -5,7 +5,7 @@ import NavIcons from "./nav-icons";
 
 const Navbar = () => {
   return (
-    <div className="h-20 px-4 md:px-8 lg:px-16 xl:32 relative">
+    <div className="h-20 px-4 md:px-8 lg:px-16 fixed z-50 w-full backdrop-blur-xl">
       {/* Mobile */}
       <div className="h-full flex items-center justify-between lg:hidden">
         <Link href="/">
@@ -29,7 +29,7 @@ const Navbar = () => {
           </div>
         </div>
         {/* right */}
-        <div className="w-2/3 lg:w-1/2 flex items-center justify-between gap-8">
+        <div className="w-2/3 lg:w-1/2 flex items-center justify-end gap-8">
           <SearchBar />
           <NavIcons />
         </div>

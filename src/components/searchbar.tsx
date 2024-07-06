@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { FiSearch } from "react-icons/fi";
+import { Button } from "./ui/button";
 
 const SearchBar = () => {
   const router = useRouter();
@@ -16,18 +17,21 @@ const SearchBar = () => {
 
   return (
     <form
-      className="flex items-center justify-between gap-4 bg-slate-100 p-2 px-4 rounded-md flex-1"
+      className="flex items-center justify-between gap-4 bg-transparent p-2 px-4 rounded-md w-1/2 ring-1 ring-slate-300"
       onSubmit={handleSearch}
     >
       <input
         type="text"
         name="name"
         placeholder="Search store..."
-        className="bg-transparent w-full outline-none"
+        className="bg-transparent w-full outline-none text-black"
       />
-      <button className="cursor-pointer">
+      <Button
+        variant="ghost"
+        className="cursor-pointer hover:bg-transparent p-0 h-0"
+      >
         <FiSearch className="w-4 h-4 text-slate-400" />
-      </button>
+      </Button>
     </form>
   );
 };
