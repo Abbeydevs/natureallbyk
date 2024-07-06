@@ -1,7 +1,13 @@
+import ProductList from "@/components/product-list";
+import Slider from "@/components/slider";
+
 const HomePage = () => {
   return (
-    <div className=''>HomePage</div>
-  )
-}
+    <div className="">
+      <Slider />
+      <ProductList />
+    </div>
+  );
+};
 
-export default HomePage
+export default HomePage;

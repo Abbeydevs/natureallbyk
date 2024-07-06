@@ -8,7 +8,7 @@ import {
   HiOutlineShoppingCart,
   HiOutlineBell,
 } from "react-icons/hi";
-import CartModal from "./cartModal";
+import CartModal from "./cart-modal";
 
 const NavIcons = () => {
   const [isProfileOPen, setIsProfileOpen] = useState(false);
