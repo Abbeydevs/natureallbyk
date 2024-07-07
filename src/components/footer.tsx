@@ -5,17 +5,17 @@ import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
     <div className="flex flex-col items-center justify-between gap-8 p-4 pt-20 lg:px-16 bg-black text-white">
-      <div className="flex flex-col lg:flex-row items-center justify-between">
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between">
         <div className="w-full lg:w-1/2">
           <h1 className="text-2xl font-bold">NatureAll By K</h1>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground w-2/3 mt-3">
             NatureAll By K produce natural products to make your hair better and
             treat hair diseases. With our products you can start caring for your
             skin the right way.{" "}
           </p>
           <div className="mt-8">
             <p className="text-green-300">Follow us on:</p>
-            <div className="flex items-start justify-start gap-5 mt-2">
+            <div className="flex items-start justify-start gap-5 mt-3">
               <Link href="/">
                 <FaFacebook />
               </Link>
@@ -28,7 +28,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-end gap-8">
+        <div className="flex items-center lg:justify-end gap-8 mt-5">
           <Link href="/" className="hover:text-green-300">
             <p>Privacy Policy</p>
           </Link>
