@@ -6,7 +6,6 @@ import productImg2 from "../../public/images/img2.jpg";
 import productImg3 from "../../public/images/img3.jpg";
 import productImg4 from "../../public/images/img4.jpg";
 import { Button } from "./ui/button";
-import { ShoppingBag, ShoppingBasket } from "lucide-react";
 
 const ProductList = () => {
   return (

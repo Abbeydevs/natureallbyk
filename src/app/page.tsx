@@ -1,11 +1,10 @@
 import CategoryList from "@/components/category-list";
 import ProductList from "@/components/product-list";
 import Slider from "@/components/slider";
-import { Separator } from "@/components/ui/separator";
 
 const HomePage = () => {
   return (
-    <div className="">
+    <div>
       <Slider />
       <div className="px-4 md:px-8 lg:px-16 py-20 space-y-6">
         <h1 className="text-lg font-bold">Featured Products</h1>
