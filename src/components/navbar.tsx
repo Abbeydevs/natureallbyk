@@ -9,7 +9,7 @@ const Navbar = () => {
       {/* Mobile */}
       <div className="h-full flex items-center justify-between lg:hidden">
         <Link href="/">
-          <div className="text-xl tracking-wide font-bold">NatureAllByK</div>
+          <div className="text-xl tracking-wide font-bold">NatureAllByKay</div>
         </Link>
         <NavMenu />
       </div>
