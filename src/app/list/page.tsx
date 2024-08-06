@@ -3,8 +3,18 @@ import Image from "next/image";
 import productImg from "../../../public/images/img8.jpg";
 import Filter from "@/components/filter";
 import ProductList from "@/components/product-list";
+import { wixClientServer } from "@/lib/wix-client-server";
 
-const ListPage = () => {
+interface ListPageProps {
+  searchParams: any;
+}
+
+const ListPage = async ({ searchParams }: ListPageProps) => {
+  const wixClient = await wixClientServer();
+  const category = await wixClient.collections.getCollectionBySlug(
+    searchParams.category || "all-products"
+  );
+
   return (
     <div className="px-4 md:px-8 lg:px-16 py-20">
       <div className="space-y-6 h-auto lg:h-screen flex justify-center items-center">
@@ -24,7 +34,12 @@ const ListPage = () => {
         <h1 className="text-xl font-bold">All Products</h1>
         <Filter />
       </div>
-      <ProductList />
+      <ProductList
+        categoryId={
+          category.collection?._id || "00000000-000000-000000-000000000001"
+        }
+        searchParams={searchParams}
+      />
     </div>
   );
 };

@@ -45,11 +45,12 @@ const NavIcons = () => {
         </div>
       )}
       <HiOutlineBell className="w-6 h-6" />
-      <div className="relative cursor-pointer">
-        <HiOutlineShoppingCart
-          className="w-6 h-6"
-          onClick={() => setIsCartOpen((open) => !open)}
-        />
+
+      <div
+        className="relative cursor-pointer"
+        onClick={() => setIsCartOpen((open) => !open)}
+      >
+        <HiOutlineShoppingCart className="w-6 h-6" />
         <div
           className="absolute -top-2 -right-2 w-5 h-5 bg-red-500 rounded-full 
             flex items-center justify-center text-white text-xs"
